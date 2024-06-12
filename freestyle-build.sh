@@ -1,1 +1,1 @@
-maven --version
+echo "Hello World!"
