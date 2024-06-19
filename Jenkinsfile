@@ -24,13 +24,13 @@ pipeline {
                 }
             }
         }
-        // stage("build jar") {
-        //     steps {
-        //         script {
-        //             buildJar()
-        //         }
-        //     }
-        // }
+        stage("build jar") {
+            steps {
+                script {
+                    buildJar()
+                }
+            }
+        }
         // stage("build image") {
         //     steps {
         //         script {
