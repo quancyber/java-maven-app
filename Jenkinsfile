@@ -31,13 +31,15 @@ pipeline {
                 }
             }
         }
-        // stage("build image") {
-        //     steps {
-        //         script {
-        //             buildImage()
-        //         }
-        //     }
-        // }
+        stage("build and push image") {
+            steps {
+                script {
+                    buildImage 'quancyber/demo-app:3.0'
+                    dockerLogin()
+                    dockerPush 'quancyber/demo-app:3.0'
+                }
+            }
+        }
         stage("deploy") {
             steps {
                 script {
