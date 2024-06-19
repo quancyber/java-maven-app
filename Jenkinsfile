@@ -33,9 +33,7 @@ pipeline {
         stage("build and push image") {
             steps {
                 script {
-                    // buildImage 'quancyber/demo-app:2.0'
-                    // dockerLogin()
-                    // dockerPush 'quancyber/demo-app:2.0'
+                    
                     buildImage()
                 }
             }
