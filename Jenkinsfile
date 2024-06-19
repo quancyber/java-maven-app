@@ -2,7 +2,7 @@
 
 library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
         [$class: 'GitSCMSource',
-         remote: 'https://gitlab.com/nanuchi/jenkins-shared-library.git',
+         remote: 'https://gitlab.com/quankngl01/jenkins-shared-library.git',
          credentialsId: 'gitlab-credentials'
         ]
 )
@@ -33,9 +33,10 @@ pipeline {
         stage("build and push image") {
             steps {
                 script {
-                    buildImage 'nanajanashia/demo-app:jma-3.0'
-                    dockerLogin()
-                    dockerPush 'nanajanashia/demo-app:jma-3.0'
+                    // buildImage 'quancyber/demo-app:2.0'
+                    // dockerLogin()
+                    // dockerPush 'quancyber/demo-app:2.0'
+                    buildImage()
                 }
             }
         }
