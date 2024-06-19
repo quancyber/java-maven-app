@@ -2,8 +2,8 @@
 
 library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
         [$class: 'GitSCMSource',
-         remote: 'https://gitlab.com/quankngl01/jenkins-shared-library.git',
-         credentialsId: 'gitlab-credentials'
+         remote: 'https://github.com/quancyber/jenkins-shared-library.git',
+         credentialsId: 'github-credentials'
         ]
 )
 
@@ -33,7 +33,6 @@ pipeline {
         stage("build and push image") {
             steps {
                 script {
-                    
                     buildImage()
                 }
             }
