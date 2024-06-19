@@ -24,20 +24,20 @@ pipeline {
                 }
             }
         }
-        stage("build jar") {
-            steps {
-                script {
-                    buildJar()
-                }
-            }
-        }
-        stage("build image") {
-            steps {
-                script {
-                    buildImage()
-                }
-            }
-        }
+        // stage("build jar") {
+        //     steps {
+        //         script {
+        //             buildJar()
+        //         }
+        //     }
+        // }
+        // stage("build image") {
+        //     steps {
+        //         script {
+        //             buildImage()
+        //         }
+        //     }
+        // }
         stage("deploy") {
             steps {
                 script {
