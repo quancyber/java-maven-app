@@ -20,7 +20,10 @@ pipeline {
         stage('deploy') {
             steps {
                 script {
-                    echo "Deploying the application..."
+                    def dockerCmd = 'docker run -p 3080:3080 -d quancyber/react-node-app:1.0'
+                    sshagent(['ec2-server']) {
+                        sh "ssh -o StrictHostKeyChecking=no ec2-user@52.77.224.42 ${dockerCmd}" 
+                    }
                 }
             }
         }
