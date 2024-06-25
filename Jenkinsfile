@@ -10,7 +10,7 @@ library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
 pipeline {
     agent any
     tools {
-        maven 'maven-3.9.7'
+        maven 'apache-maven-3.9.7'
     }
     environment {
         IMAGE_NAME = 'quancyber/react-node-app:2.0'
