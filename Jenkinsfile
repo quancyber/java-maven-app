@@ -2,7 +2,7 @@
 
 library identifier: 'jenkins-shared-library@master', retriever: modernSCM(
     [$class: 'GitSCMSource',
-     remote: 'https://github.com/quancyber/java-maven-app.git',
+     remote: 'https://github.com/quancyber/jenkins-shared-library.git',
      credentialsId: 'github-credentials'
     ]
 )
